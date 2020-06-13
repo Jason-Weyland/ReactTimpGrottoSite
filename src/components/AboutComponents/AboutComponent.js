@@ -25,7 +25,7 @@ const FactsCard = ({ factscard }) => {
 
 const AboutTab = ({ factscard }) => {
     return (
-        <TabPane tabId="1">
+        <TabPane fade tabId="1">
             <Row>
                 <div className="col">
                     <Card className="mt-5 text-center bg-light">

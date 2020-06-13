@@ -91,7 +91,7 @@ class Officers extends Component {
         };
         console.log('rendermodal:' + RenderModal)
         return (
-            <TabPane tabId="2">
+            <TabPane fade tabId="2">
                 <RenderCard officers={this.props.officers} />
             </TabPane>
         );

@@ -3,6 +3,7 @@ import { TabContent, Nav, NavItem, NavLink, BreadcrumbItem, Breadcrumb } from "r
 import { Link } from "react-router-dom";
 import AboutTab from "./AboutComponent";
 import Officers from "./OfficerComponent";
+import FaqTab from './FaqComponent';
 import classnames from "classnames";
 
 const About = (props) => {
@@ -79,7 +80,8 @@ const About = (props) => {
                         </Nav>
                         <TabContent activeTab={activeTab}>
                             <AboutTab factscard={props.factscard} />
-                            <Officers officers={props.officers}/>
+                            <Officers officers={props.officers} />
+                            <FaqTab faq={props.faq} />
                         </TabContent>
                     </div>
                 </div>
