@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+h1,
+h2,
+h3 {
+    font-family: "Amatic SC";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jumbotron {
+    padding: 30px;
+    background-image: linear-gradient(to right, #ffa626, #4c5401);
+    color: white;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    background-color: #4c5401;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dropdown-menu {
+    background-color: #ffa626;
 }
 
-.App-link {
-  color: #61dafb;
+.site-footer {
+    background-image: linear-gradient(#f8c37a, #7b8337);
+    padding: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html {
+    overflow-x: hidden;
+}
+
+.modal-header {
+    background-color: #ffa626;
+}
+
+.card-header-green {
+    background-color: #4c5401;
+}
+
+.card-header-yellow {
+    background-color: #ffa626;
+}
+
+#tabMeet .card {
+    border-color: #4c5401;
+}
+
+.card-highlight:hover {
+    border-color: #ffa626;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.carousel-inner,
+.carousel-item {
+    background-color: darkslategrey;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-link:hover {
+    text-decoration: underline;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #mdHall {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #anthodites {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calendar {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .fb-page {
+        width: 328px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .fb-page {
+        width: 448px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .fb-page {
+        width: 452.8px;
+    }
 }
