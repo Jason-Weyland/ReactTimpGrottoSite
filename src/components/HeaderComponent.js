@@ -17,7 +17,6 @@ class Header extends Component {
         this.toggleModal = this.toggleModal.bind(this);
         this.handleLogin = this.handleLogin.bind(this);
         this.toggleTab = this.toggleTab.bind(this);
-
     }
 
     toggleNav() {
@@ -27,8 +26,7 @@ class Header extends Component {
     }
 
     toggleTab() {
-        
-            window.location.reload(true)
+        window.location.reload(true);
     }
 
     toggleModal() {
@@ -88,7 +86,7 @@ class Header extends Component {
                                 </UncontrolledDropdown>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/events">
-                                        <i className="fa fa-newspaper-o fa-lg d-sm-none d-md-inline" /> Events
+                                        <i className="fa fa-newspaper-o fa-lg d-sm-none d-md-inline" /> News & Events
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -96,18 +94,30 @@ class Header extends Component {
                                         <i className="fa fa-compass fa-lg d-sm-none d-md-inline" /> Caves
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/join">
+                                {/* <NavItem>
+                                    <NavLink className="nav-link" to="/about/join">
                                         <i className="fa fa-handshake-o fa-lg d-sm-none d-md-inline" /> Join
                                     </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                                 <NavItem>
                                     <NavLink className="nav-link" to="/contact">
-                                        <i className="fa fa-id-card fa-lg d-sm-none d-md-inline" />  Contact
-
+                                        <i className="fa fa-id-card fa-lg d-sm-none d-md-inline" /> Contact
                                     </NavLink>
                                 </NavItem>
                             </Nav>
+                            <Row>
+                                <form className="form-inline d-inline d-sm-none">
+                                    <div className="col-10">
+                                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                                    </div>
+                                    <div className="col-2">
+                                        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">
+                                            Search
+                                        </button>
+                                    </div>
+                                </form>
+                            </Row>
+
                             <span className="navbar-text ml-auto">
                                 <Button outline onClick={this.toggleModal}>
                                     <i className="fa fa-sign-in fa-lg d-sm-none d-md-inline-block" /> Sign In

@@ -10,7 +10,7 @@ class Jumbo extends Component {
                             <div className="col-3 col-lg-2 align-self-center">
                                 <img src="/assets/images/logo.jpg" alt="timp-grotto-logo" className="img-fluid" />
                             </div>
-                            <div className="col col-md-5">
+                            <div className="col-9 col-md-5">
                                 <h1 className="text-dark align-self-center">
                                     <strong>Timpanogos Grotto</strong>
                                 </h1>
@@ -33,9 +33,6 @@ class Jumbo extends Component {
                                         Search
                                     </button>
                                 </form>
-                                <button className="btn btn-warning btn-lg mt-4 d-inline d-sm-none" data-toggle="modal" data-target="#signinModal">
-                                    Sign In
-                                </button>
                             </div>
                         </div>
                     </div>

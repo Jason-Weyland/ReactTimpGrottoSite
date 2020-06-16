@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AboutTab from "./AboutComponent";
 import Officers from "./OfficerComponent";
 import FaqTab from "./FaqComponent";
-import Join from './JoinComponent'
+import Join from "./JoinComponent";
 import classnames from "classnames";
 
 class About extends Component {
@@ -34,8 +34,8 @@ class About extends Component {
                 <>
                     {navtab.map((navtab) => {
                         return (
-                            <Link to={`/about/${navtab.tabId}`} key={navtab.tabId}>
-                                <NavItem>
+                            <NavItem>
+                                <Link className="text-dark" to={`/about/${navtab.tabId}`} key={navtab.tabId}>
                                     <NavLink
                                         className={classnames({ active: this.state.activeTab === navtab.tabId })}
                                         onClick={() => {
@@ -45,8 +45,8 @@ class About extends Component {
                                         {" "}
                                         {navtab.text}
                                     </NavLink>
-                                </NavItem>
-                            </Link>
+                                </Link>
+                            </NavItem>
                         );
                     })}
                 </>
