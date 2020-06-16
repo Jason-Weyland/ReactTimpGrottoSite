@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Jumbo from "./JumbotronComponent";
-import { Navbar, NavbarBrand, Nav, NavItem, Collapse, NavbarToggler, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavItem, Collapse, NavbarToggler, Row, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 // FONT AWESOME ICONS NOT WORKING, COME BACK TO FIX IT
@@ -9,16 +9,38 @@ class Header extends Component {
     constructor(props) {
         super(props);
 
-        this.toggleNav = this.toggleNav.bind(this);
         this.state = {
             isNavOpen: false,
+            isModalOpen: false,
         };
+        this.toggleNav = this.toggleNav.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
+        this.toggleTab = this.toggleTab.bind(this);
+
     }
 
     toggleNav() {
         this.setState({
             isNavOpen: !this.state.isNavOpen,
         });
+    }
+
+    toggleTab() {
+        
+            window.location.reload(true)
+    }
+
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen,
+        });
+    }
+
+    handleLogin(event) {
+        alert(`Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`);
+        this.toggleModal();
+        event.preventDefault();
     }
     render() {
         return (
@@ -43,17 +65,17 @@ class Header extends Component {
                                     </DropdownToggle>
                                     <DropdownMenu color="dark" right>
                                         <DropdownItem>
-                                            <NavLink className="nav-link text-dark" to="/about">
+                                            <NavLink className="nav-link text-dark" to="/about/us">
                                                 About Us
                                             </NavLink>
                                         </DropdownItem>
                                         <DropdownItem>
-                                            <NavLink className="nav-link text-dark" to="/about/officers">
+                                            <NavLink className="nav-link text-dark" to="/about/meet">
                                                 Meet the Officers
                                             </NavLink>
                                         </DropdownItem>
                                         <DropdownItem>
-                                            <NavLink className="nav-link text-dark" to="/about/FAQ">
+                                            <NavLink className="nav-link text-dark" to="/about/faq">
                                                 FAQ
                                             </NavLink>
                                         </DropdownItem>
@@ -66,28 +88,67 @@ class Header extends Component {
                                 </UncontrolledDropdown>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/events">
-                                        <i className="fa fa-newspaper fa-lg d-sm-none d-md-inline" /> News & Events
+                                        <i className="fa fa-newspaper-o fa-lg d-sm-none d-md-inline" /> Events
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/caves">
-                                        <i className="fas fa-mountain fa-lg d-sm-none d-md-inline" /> Caves
+                                        <i className="fa fa-compass fa-lg d-sm-none d-md-inline" /> Caves
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/join">
-                                        <i className="fa fa-handshake fa-lg d-sm-none d-md-inline" /> Join Us
+                                        <i className="fa fa-handshake-o fa-lg d-sm-none d-md-inline" /> Join
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/contact">
-                                        <i className="fa fa-id-card fa-lg d-sm-none d-md-inline" /> Contact
+                                        <i className="fa fa-id-card fa-lg d-sm-none d-md-inline" />  Contact
+
                                     </NavLink>
                                 </NavItem>
                             </Nav>
+                            <span className="navbar-text ml-auto">
+                                <Button outline onClick={this.toggleModal}>
+                                    <i className="fa fa-sign-in fa-lg d-sm-none d-md-inline-block" /> Sign In
+                                </Button>
+                            </span>
                         </Collapse>
                     </div>
                 </Navbar>
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>
+                        <h2>
+                            <strong>Login</strong>
+                        </h2>
+                    </ModalHeader>
+                    <ModalBody>
+                        <Form onSubmit={this.handleLogin}>
+                            <FormGroup>
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="text" id="username" name="username" innerRef={(input) => (this.username = input)} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" id="password" name="password" innerRef={(input) => (this.password = input)} />
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="checkbox" name="remember" innerRef={(input) => (this.remember = input)} />
+                                    Remember me
+                                </Label>
+                            </FormGroup>
+                            <Row className="d-flex justify-content-center">
+                                <Button type="submit" value="submit" color="warning">
+                                    Login
+                                </Button>
+                                <Button type="button" color="secondary" className="ml-1" onClick={this.toggleModal}>
+                                    Cancel
+                                </Button>
+                            </Row>
+                        </Form>
+                    </ModalBody>
+                </Modal>
             </React.Fragment>
         );
     }

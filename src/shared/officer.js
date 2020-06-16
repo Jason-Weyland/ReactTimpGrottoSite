@@ -24,7 +24,14 @@ export const OFFICERS = [
         id: 4,
         image: "/assets/images/lbccShadow.jpg",
         name: "Jason Weyland",
-        title: "Badass",
+        title: "Trip Organizer",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!",
+    },
+    {
+        id: 5,
+        image: "/assets/images/lbccShadow.jpg",
+        name: "Jack Johnson",
+        title: "Trip Organizer",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!",
     },
 ];

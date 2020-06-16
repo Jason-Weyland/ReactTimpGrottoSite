@@ -15,10 +15,10 @@ const Footer = (props) => {
                                 <Link to="/home">Home</Link>
                             </li>
                             <li>
-                                <Link to="/about">About</Link>
+                                <Link to="/about/us">About</Link>
                             </li>
                             <li>
-                                <Link to="/about/FAQ">FAQ</Link>
+                                <Link to="/about/faq">FAQ</Link>
                             </li>
                             <li>
                                 <Link to="/events">News & Events</Link>
@@ -38,7 +38,7 @@ const Footer = (props) => {
                         <div className="row">
                             <div className="col-12 offset-2">
                                 <a href="http://www.caves.org" target="_blank" rel="noopener noreferrer">
-                                    <img src="assets/images/nss_logo_color.gif" alt="NSS Logo" width="60%" />
+                                    <img src="/assets/images/nss_logo_color.gif" alt="NSS Logo" width="60%" />
                                 </a>
                             </div>
                             <div className="col">

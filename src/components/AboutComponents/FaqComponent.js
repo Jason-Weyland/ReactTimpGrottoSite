@@ -4,7 +4,7 @@ import { TabPane, Row } from "reactstrap";
 
 const FaqTab = ({ faq }) => {
     return (
-        <TabPane fade tabId="3">
+        <TabPane fade="true" tabId="faq">
             <Row className="row-content">
                 <div className="col-12 col-lg-5 col-xl-4 order-lg-last">
                     <img className="d-none d-lg-inline align-self-center mt-5" src="/assets/images/mdOverflow.jpg" id="mdHall" alt="Main Drain Hall" width="100%" height="auto" />
@@ -19,7 +19,7 @@ const FaqTab = ({ faq }) => {
                             return (
                                 <Card key={faq.id}>
                                     <Card.Header>
-                                        <Accordion.Toggle className='text-dark' as={Button} variant="link" eventKey={faq.id}>
+                                        <Accordion.Toggle className="text-dark" as={Button} variant="link" eventKey={faq.id}>
                                             {faq.header}
                                         </Accordion.Toggle>
                                     </Card.Header>

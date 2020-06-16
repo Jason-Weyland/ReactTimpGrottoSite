@@ -5,7 +5,7 @@ export const CAROUSEL = [
         alt: "Timp Grotto Logo",
         header: "About",
         caption: "See what the Timpanogos Grotto is all about.",
-        link: "/about",
+        link: "/about/us",
     },
 
     {

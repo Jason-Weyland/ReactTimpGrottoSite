@@ -25,7 +25,7 @@ const FactsCard = ({ factscard }) => {
 
 const AboutTab = ({ factscard }) => {
     return (
-        <TabPane fade tabId="1">
+        <TabPane fade="true" tabId="us">
             <Row>
                 <div className="col">
                     <Card className="mt-5 text-center bg-light">
@@ -34,7 +34,7 @@ const AboutTab = ({ factscard }) => {
                                 <p className="mb-0">“When I cave, I feel a connection to the Creator. The beauty leaves me speechless. The awesomeness of it all is breathtaking.”</p>
                                 <footer className="blockquote-footer">
                                     Carole Devillers,
-                                    <cite title="Source Title">Extraordinary Women Leaders in Speleology</cite>
+                                    <cite title="Source Title"> Extraordinary Women Leaders in Speleology</cite>
                                 </footer>
                             </blockquote>
                         </CardBody>
