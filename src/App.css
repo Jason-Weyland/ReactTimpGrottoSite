@@ -75,40 +75,20 @@ html {
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
-    #mdHall {
-        width: 100%;
-        height: auto;
-    }
+.page-enter {
+    opacity: 0;
 }
 
-@media screen and (max-width: 768px) {
-    #anthodites {
-        width: 100%;
-        height: auto;
-    }
+.page-enter-active {
+    opacity: 1;
+    transition: 300ms ease-in;
 }
 
-@media screen and (max-width: 768px) {
-    .calendar {
-        height: 500px;
-    }
+.page-exit {
+    opacity: 1;
 }
 
-@media screen and (min-width: 768px) {
-    .fb-page {
-        width: 328px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .fb-page {
-        width: 448px;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .fb-page {
-        width: 452.8px;
-    }
+.page-exit-active {
+    opacity: 0;
+    transition: 300ms ease-out;
 }

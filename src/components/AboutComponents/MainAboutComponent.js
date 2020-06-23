@@ -1,4 +1,4 @@
-import React, { Component, useState, setState } from "react";
+import React, { Component } from "react";
 import { TabContent, Nav, NavItem, NavLink, BreadcrumbItem, Breadcrumb } from "reactstrap";
 import { Link } from "react-router-dom";
 import AboutTab from "./AboutComponent";
@@ -67,7 +67,7 @@ class About extends Component {
                     </div>
                     <div className="row">
                         <div className="col">
-                            <Nav tabs justified>
+                            <Nav tabs fill>
                                 <NavTabs navtab={this.props.navtab} />
                             </Nav>
                             <TabContent activeTab={this.state.activeTab}>

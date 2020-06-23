@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, Card, CardBody, CardHeader, CardDeck, Modal, ModalBody, Row, TabPane, CardFooter } from "reactstrap";
+import { Button, Card, CardBody, Modal, ModalBody, Row, TabPane } from "reactstrap";
+import { baseUrl } from "../../shared/baseUrl";
 
 class Officers extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class Officers extends Component {
                                         <Card>
                                             <CardBody>
                                                 <Row className="d-flex justify-content-center">
-                                                    <img className="img-card-top mb-2" src={officer.image} width="75%" height="auto" />
+                                                    <img className="img-card-top mb-2" src={baseUrl + officer.image} alt={officer.name} width="75%" height="auto" />
                                                 </Row>
                                                 <h2 className="card-title text-center mb-2">
                                                     <strong>{officer.name}</strong>
@@ -57,29 +58,29 @@ class Officers extends Component {
         const RenderCard = ({ officers }) => {
             return (
                 <Row className="row-content">
-                        {officers.map((officer) => {
-                            return (
-                                <React.Fragment key={officer.id}>
-                                    <div className="col-sm-6 col-md-3">
-                                        <Card className="mb-4 card-highlight">
-                                            <CardBody>
-                                                <img className="img-card-top" src={officer.image} alt="officer" width="100%" height="auto" />
-                                                <br />
-                                                <h2 className="card-title text-center">
-                                                    <strong>{officer.name}</strong>
-                                                </h2>
-                                                <h3 className="card-title text-center">{officer.title}</h3>
-                                                <div className="d-flex justify-content-center">
-                                                    <Button type="button" onClick={() => this.toggleModal(officer)} className="btn btn-sm btn-warning">
-                                                        See More
-                                                    </Button>
-                                                </div>
-                                            </CardBody>
-                                        </Card>
-                                    </div>
-                                </React.Fragment>
-                            );
-                        })}
+                    {officers.map((officer) => {
+                        return (
+                            <React.Fragment key={officer.id}>
+                                <div className="col-sm-6 col-md-3">
+                                    <Card className="mb-4 card-highlight">
+                                        <CardBody>
+                                            <img className="img-card-top" src={baseUrl + officer.image} alt="officer" width="100%" height="auto" />
+                                            <br />
+                                            <h2 className="card-title text-center">
+                                                <strong>{officer.name}</strong>
+                                            </h2>
+                                            <h3 className="card-title text-center">{officer.title}</h3>
+                                            <div className="d-flex justify-content-center">
+                                                <Button type="button" onClick={() => this.toggleModal(officer)} className="btn btn-sm btn-warning">
+                                                    See More
+                                                </Button>
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                            </React.Fragment>
+                        );
+                    })}
                     <RenderModal officers={this.props.officers} isModalOpen={this.state.isModalOpen} />
                 </Row>
             );

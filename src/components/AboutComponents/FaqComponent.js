@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion, AccordionCollapse, Button, Card, AccordionToggle } from "react-bootstrap";
+import { Accordion, Button, Card } from "react-bootstrap";
 import { TabPane, Row } from "reactstrap";
 
 const FaqTab = ({ faq }) => {

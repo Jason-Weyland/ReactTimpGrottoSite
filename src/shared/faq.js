@@ -46,3 +46,5 @@ export const FAQ = [
             "No. Caving is an inherently dangerous activity. People are injured and die every year. The caving we do does not involve guard rails, paved paths, and stairs. The kind of caving we do is NOT a tour. This is why we take safety seriously. Also, caving is not for everyone. We are happy to get you started, but we do not hold your hand - everyone is ultimately responsible for themselves. We try to help make it as safe as possible, but caving is not simply hiking underground. If we do not think you can handle yourself safely or if you cannot follow conservation guidelines, you will not be invited on or allowed to join trips. It is not just your life at risk, it is our lives, too.",
     },
 ];
+
+

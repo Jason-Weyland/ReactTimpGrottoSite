@@ -1,5 +1,7 @@
 import React from "react";
 import { TabPane, Row, Card, CardBody, CardHeader } from "reactstrap";
+// import { FadeTransform } from 'react-animation-components';
+
 
 const FactsCard = ({ factscard }) => {
     return (
@@ -72,7 +74,7 @@ const AboutTab = ({ factscard }) => {
                     </p>
                     <p>Time: 7:00 PM to 8:00 PM</p>
                     <p>We hold our grotto meetings on the third Tuesday of each month at the orem Library.</p>
-                    <a role="button" className="btn btn-link" href="https://www.google.com/maps/place/Orem+Public+Library/@40.298669,-111.69467,15z/data=!4m5!3m4!1s0x0:0x595700ed210f2254!8m2!3d40.298669!4d-111.69467" target="_blank">
+                    <a role="button" className="btn btn-link" href="https://www.google.com/maps/place/Orem+Public+Library/@40.298669,-111.69467,15z/data=!4m5!3m4!1s0x0:0x595700ed210f2254!8m2!3d40.298669!4d-111.69467" target="_blank" rel="noopener noreferrer">
                         <i className="fa fa-map"></i> Orem Public Library
                     </a>
                 </div>
@@ -101,7 +103,7 @@ const AboutTab = ({ factscard }) => {
                         removable signs as are needed for surveys; and, especially, exercise extreme care not to accidentally break or soil formations, disturb life forms or unnecessarily increase the number of disfiguring paths through an area.
                     </p>
                     <p>Leave nothing but footprints, take nothing but photos, kill nothing but time.</p>
-                    <a href="https://en.wikipedia.org/wiki/Federal_Cave_Resources_Protection_Act_of_1988" target="_blank">
+                    <a href="https://en.wikipedia.org/wiki/Federal_Cave_Resources_Protection_Act_of_1988" target="_blank" rel="noopener noreferrer">
                         Federal Cave Resources Protection Act
                     </a>
                 </div>

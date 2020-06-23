@@ -16,3 +16,4 @@ export const NAVTAB = [
         text: 'Become a Member' 
     },
 ]
+

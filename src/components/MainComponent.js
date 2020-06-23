@@ -5,6 +5,8 @@ import Footer from "./FooterComponent";
 import About from "./AboutComponents/MainAboutComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { fetchCarousel, fetchFactsCard, fetchFaq, fetchOfficers, fetchNavTab, fetchStates } from "../redux/ActionCreators";
 
 const mapStateToProps = (state) => {
     return {
@@ -17,20 +19,41 @@ const mapStateToProps = (state) => {
     };
 };
 
+const mapDispatchToProps = {
+    fetchCarousel: () => fetchCarousel(),
+    fetchFactsCard: () => fetchFactsCard(),
+    fetchFaq: () => fetchFaq(),
+    fetchOfficers: () => fetchOfficers(),
+    fetchNavTab: () => fetchNavTab(),
+    fetchStates: () => fetchStates(),
+};
+
 class Main extends Component {
+    componentDidMount() {
+        this.props.fetchCarousel();
+        this.props.fetchFactsCard();
+        this.props.fetchFaq();
+        this.props.fetchOfficers();
+        this.props.fetchNavTab();
+        this.props.fetchStates();
+    }
     render() {
         return (
             <div>
                 <Header />
-                <Switch>
-                    <Route path="/home" render={() => <Home carousel={this.props.carousel} />} />
-                    <Route exact strict path="/about/:tabId" render={({ match }) => <About tabId={match.params.tabId} states={this.props.states} factscard={this.props.factscard} officers={this.props.officers} faq={this.props.faq} navtab={this.props.navtab} />} />
-                    <Redirect to="/home" />
-                </Switch>
+                <TransitionGroup>
+                    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+                        <Switch>
+                            <Route path="/home" render={() => <Home carousel={this.props.carousel.carousel} />} />
+                            <Route exact strict path="/about/:tabId" render={({ match }) => <About tabId={match.params.tabId} states={this.props.states.states} factscard={this.props.factscard.factscard} officers={this.props.officers.officers} faq={this.props.faq.faq} navtab={this.props.navtab.navtab} />} />
+                            <Redirect to="/home" />
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
                 <Footer />
             </div>
         );
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

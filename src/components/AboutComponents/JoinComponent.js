@@ -52,7 +52,7 @@ class Join extends Component {
                 <>
                     <option value={null}>-Select-</option>
                     {states.map((states) => {
-                        return <option value={states}>{states}</option>;
+                        return <option key={states} value={states}>{states}</option>;
                     })}
                 </>
             );
@@ -276,13 +276,13 @@ class Join extends Component {
                                         <ul>
                                             <li>
                                                 Cave in a safe manner with the appropriate amount of gear as outlined in{" "}
-                                                <a href="https://www.amazon.com/Alpine-Caving-Techniques-Complete-Efficient/dp/3908495105" target="_blank">
+                                                <a href="https://www.amazon.com/Alpine-Caving-Techniques-Complete-Efficient/dp/3908495105" target="_blank" rel="noopener noreferrer">
                                                     Alpine Caving Techniques.
                                                 </a>
                                             </li>
                                             <li>
                                                 Follow the current national decontamination protocol between caving trips, as detailed on{" "}
-                                                <a href="https://www.whitenosesyndrome.org/" target="_blank">
+                                                <a href="https://www.whitenosesyndrome.org/" target="_blank" rel="noopener noreferrer">
                                                     whitenosesyndrome.org
                                                 </a>
                                             </li>

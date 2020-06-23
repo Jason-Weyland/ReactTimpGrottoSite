@@ -21,7 +21,8 @@ export const FACTSCARD = [
     },
     {
         id: 5,
-        dataTitle: 'Utah\s Longest Cave',
+        dataTitle: 'Utah\'s Longest Cave',
         dataDescription: '5.93 Miles'
     },
 ]
+
