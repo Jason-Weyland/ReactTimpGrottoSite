@@ -3,6 +3,8 @@ import Header from "./HeaderComponent";
 import Home from "./HomeComponent";
 import Footer from "./FooterComponent";
 import About from "./AboutComponents/MainAboutComponent";
+import Contact from "./ContactComponent";
+import CreateAccount from "./CreateAccountComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -45,7 +47,14 @@ class Main extends Component {
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                         <Switch>
                             <Route path="/home" render={() => <Home carousel={this.props.carousel.carousel} />} />
-                            <Route exact strict path="/about/:tabId" render={({ match }) => <About tabId={match.params.tabId} states={this.props.states.states} factscard={this.props.factscard.factscard} officers={this.props.officers.officers} faq={this.props.faq.faq} navtab={this.props.navtab.navtab} />} />
+                            <Route
+                                exact
+                                strict
+                                path="/about/:tabId"
+                                render={({ match }) => <About tabId={match.params.tabId} states={this.props.states.states} factscard={this.props.factscard.factscard} officers={this.props.officers.officers} faq={this.props.faq.faq} navtab={this.props.navtab.navtab} />}
+                            />
+                            <Route exact path="/contact" component={Contact} />
+                            <Route exact path="/createAccount" render={() => <CreateAccount states={this.props.states.states} />} />
                             <Redirect to="/home" />
                         </Switch>
                     </CSSTransition>

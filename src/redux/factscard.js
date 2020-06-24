@@ -1,4 +1,3 @@
-import { FACTSCARD } from "../shared/factscard";
 import * as actionType from './ActionTypes';
 
 export const FactscardRed = (

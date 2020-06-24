@@ -1,6 +1,7 @@
 import * as actionType from "./ActionTypes";
 import { baseUrl } from "../shared/baseUrl";
-import { actionTypes } from "react-redux-form";
+
+// ADD ERROR HANDLING
 
 export const fetchCarousel = () => (dispatch) => {
     fetch(baseUrl + "carousel")

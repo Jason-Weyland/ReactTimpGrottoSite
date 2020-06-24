@@ -1,4 +1,3 @@
-import { OFFICERS } from "../shared/officer";
 import * as actionType from "./ActionTypes";
 
 export const OfficersRed = (
