@@ -74,7 +74,10 @@ class About extends Component {
                                 <AboutTab factscard={this.props.factscard} />
                                 <Officers officers={this.props.officers} />
                                 <FaqTab faq={this.props.faq} />
-                                <Join states={this.props.states} />
+                                <Join 
+                                states={this.props.states} 
+                                createNewUser={this.props.createNewUser} 
+                                resetCreateUser={this.props.resetCreateUser}/>
                             </TabContent>
                         </div>
                     </div>

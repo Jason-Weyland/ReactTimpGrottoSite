@@ -9,3 +9,6 @@ export const ADD_NAVTAB = 'ADD_NAVTAB';
 export const ADD_OFFICERS = 'ADD_OFFICERS';
 
 export const LIST_STATES = 'LIST_STATES';
+
+export const ADD_EVENTS = 'ADD_EVENTS';
+export const ADD_EVENT = 'ADD_EVENT';

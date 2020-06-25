@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BreadcrumbItem, Breadcrumb, Row, Col, FormGroup, Label, Card, CardBody, CardFooter, Button } from "reactstrap";
-import { LocalForm, Control, Errors } from "react-redux-form";
+import { Form, Control, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
 
 const required = (val) => val && val.length;
@@ -14,27 +14,30 @@ class CreateAccount extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userFirstName: "",
-            userLastName: "",
-            userUserName: "",
-            userPassword: "",
-            userEmail: "",
-            userPhone: "",
-            userAddress: "",
-            userCity: "",
-            userState: "",
-            userZip: "",
+            acctFirstName: "",
+            acctLastName: "",
+            acctUserName: "",
+            acctPassword: "",
+            acctConfPassword: "",
+            acctEmail: "",
+            acctPhone: "",
+            acctAddress: "",
+            acctCity: "",
+            acctState: "",
+            acctZip: "",
+            autoRenew: false,
+            termsAgree: false,
             touched: {
-                userFirstName: false,
-                userLastName: false,
-                userUserName: false,
-                userPasswor: false,
-                userEmail: false,
-                userPhone: false,
-                userAddress: false,
-                userCity: false,
-                userState: false,
-                userZip: false,
+                acctFirstName: false,
+                acctLastName: false,
+                acctUserName: false,
+                acctPasswor: false,
+                acctEmail: false,
+                acctPhone: false,
+                acctAddress: false,
+                acctCity: false,
+                acctState: false,
+                acctZip: false,
             },
         };
 
@@ -42,8 +45,8 @@ class CreateAccount extends Component {
     }
 
     handleSubmit(values) {
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
+        this.props.createNewUser(values);
+        this.props.resetCreateUser();
     }
 
     render() {
@@ -83,14 +86,14 @@ class CreateAccount extends Component {
                             <hr />
                         </div>
                         <div className="col">
-                            <LocalForm onSubmit={(values) => this.handleSubmit(values)} action="https://www.paypal.com/cgi-bin/webscr">
+                            <Form model="createUser" onSubmit={(values) => this.handleSubmit(values)}>
                                 <FormGroup className="form-row">
                                     <div className="col col-md-6">
-                                        <Label htmlFor="userFirstName">First Name:</Label>
-                                        <Control.text className="form-control" id="userFirstName" name="userFirstName" model=".userFirstName" validators={{ required, minLength: minLength(2) }} />
+                                        <Label htmlFor="acctFirstName">First Name:</Label>
+                                        <Control.text className="form-control" id="acctFirstName" name="acctFirstName" model=".acctFirstName" validators={{ required, minLength: minLength(2) }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userFirstName"
+                                            model=".acctFirstName"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -100,11 +103,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col col-md-6">
-                                        <Label htmlFor="userLastName">Last Name:</Label>
-                                        <Control.text className="form-control" id="userLastName" name="userLastName" model=".userLastName" validators={{ required, minLength: minLength(2) }} />
+                                        <Label htmlFor="acctLastName">Last Name:</Label>
+                                        <Control.text className="form-control" id="acctLastName" name="acctLastName" model=".acctLastName" validators={{ required, minLength: minLength(2) }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userLastName"
+                                            model=".acctLastName"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -116,11 +119,11 @@ class CreateAccount extends Component {
                                 </FormGroup>
                                 <FormGroup className="form-row">
                                     <div className="col-12 col-md-4">
-                                        <Label htmlFor="userUserName">Username:</Label>
-                                        <Control.text className="form-control" id="userUserName" name="userUserName" model=".userUserName" validators={{ required, minLength: minLength(6) }} />
+                                        <Label htmlFor="acctUserName">Username:</Label>
+                                        <Control.text className="form-control" id="acctUserName" name="acctUserName" model=".acctUserName" validators={{ required, minLength: minLength(6) }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userUserName"
+                                            model=".acctUserName"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -130,11 +133,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col col-md-4">
-                                        <Label htmlFor="userPassword">Password:</Label>
-                                        <Control.password className="form-control" id="userPassword" name="userPassword" model=".userPassword" validators={{ required, validPassword }} />
+                                        <Label htmlFor="acctPassword">Password:</Label>
+                                        <Control.password className="form-control" id="acctPassword" name="acctPassword" model=".acctPassword" validators={{ required, validPassword }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userPassword"
+                                            model=".acctPassword"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -144,11 +147,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col col-md-4">
-                                        <Label htmlFor="userConfPassword">Confirm Password:</Label>
-                                        <Control.password className="form-control" id="userConfPassword" name="userConfPassword" model=".userConfPassword" validators={{ required }} />
+                                        <Label htmlFor="acctConfPassword">Confirm Password:</Label>
+                                        <Control.password className="form-control" id="acctConfPassword" name="acctConfPassword" model=".acctConfPassword" validators={{ required }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userConfPassword"
+                                            model=".acctConfPassword"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -160,11 +163,11 @@ class CreateAccount extends Component {
                                 </FormGroup>
                                 <FormGroup className="form-row">
                                     <div className="col col-md-8">
-                                        <Label htmlFor="userEmail">Email:</Label>
-                                        <Control.text className="form-control" id="userEmail" name="userEmail" model=".userEmail" validators={{ required, validEmail }} />
+                                        <Label htmlFor="acctEmail">Email:</Label>
+                                        <Control.text className="form-control" id="acctEmail" name="acctEmail" model=".acctEmail" validators={{ required, validEmail }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userEmail"
+                                            model=".acctEmail"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -174,11 +177,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col col-md-4">
-                                        <Label htmlFor="userPhone">Phone Number:</Label>
-                                        <Control.text className="form-control" id="userPhone" name="userPhone" model=".userPhone" validators={{ required, minLength: minLength(10), maxLength: maxLength(15), isNumber }} />
+                                        <Label htmlFor="acctPhone">Phone Number:</Label>
+                                        <Control.text className="form-control" id="acctPhone" name="acctPhone" model=".acctPhone" validators={{ required, minLength: minLength(10), maxLength: maxLength(15), isNumber }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userPhone"
+                                            model=".acctPhone"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -192,11 +195,11 @@ class CreateAccount extends Component {
                                 </FormGroup>
                                 <FormGroup className="form-row">
                                     <div className="col-12 col-md-5">
-                                        <Label htmlFor="userAddress">Street Address:</Label>
-                                        <Control.text className="form-control" id="userAddress" name="userAddress" model=".userAddress" validators={{ required }} />
+                                        <Label htmlFor="acctAddress">Street Address:</Label>
+                                        <Control.text className="form-control" id="acctAddress" name="acctAddress" model=".acctAddress" validators={{ required }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userEmail"
+                                            model=".acctEmail"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -205,11 +208,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col-12 col-md-3">
-                                        <Label htmlFor="userCity">City:</Label>
-                                        <Control.text className="form-control" id="userCity" name="userCity" model=".userCity" validators={{ required }} />
+                                        <Label htmlFor="acctCity">City:</Label>
+                                        <Control.text className="form-control" id="acctCity" name="acctCity" model=".acctCity" validators={{ required }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userCity"
+                                            model=".acctCity"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -218,13 +221,13 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col-4 col-md-2">
-                                        <Label htmlFor="userState">State:</Label>
-                                        <Control.select className="form-control" id="userState" name="userState" model=".userState" validators={{ required }}>
+                                        <Label htmlFor="acctState">State:</Label>
+                                        <Control.select className="form-control" id="acctState" name="acctState" model=".acctState" validators={{ required }}>
                                             <StateList states={this.props.states} />
                                         </Control.select>
                                         <Errors
                                             className="text-danger"
-                                            model=".userState"
+                                            model=".acctState"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -233,11 +236,11 @@ class CreateAccount extends Component {
                                         />
                                     </div>
                                     <div className="col-8 col-md-2">
-                                        <Label htmlFor="userZip">Zip:</Label>
-                                        <Control.text className="form-control" id="userZip" name="userZip" model=".userZip" validators={{ required, minLength: minLength(5), isNumber }} />
+                                        <Label htmlFor="acctZip">Zip:</Label>
+                                        <Control.text className="form-control" id="acctZip" name="acctZip" model=".acctZip" validators={{ required, minLength: minLength(5), isNumber }} />
                                         <Errors
                                             className="text-danger"
-                                            model=".userZip"
+                                            model=".acctZip"
                                             show="touched"
                                             component="div"
                                             messages={{
@@ -254,7 +257,7 @@ class CreateAccount extends Component {
                                         <p style={{ fontSize: "larger" }}>Would you like to set up automatic renewal?</p>
                                     </Col>
                                     <Col xs={"12"}>
-                                        <div className="form-check">
+                                        <div className="form-check form-check-inline">
                                             <Label check>
                                                 <Control.checkbox className="form-check-input" id="autoRenew" name="autoRenew" model=".autoRenew" /> Yes, renew at $15 a year.
                                             </Label>
@@ -298,7 +301,7 @@ class CreateAccount extends Component {
                                         </Button>
                                     </div>
                                 </Row>
-                            </LocalForm>
+                            </Form>
                         </div>
                     </Row>
                 </div>

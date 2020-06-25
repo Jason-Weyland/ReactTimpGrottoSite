@@ -92,3 +92,7 @@ html {
     opacity: 0;
     transition: 300ms ease-out;
 }
+
+.scroll {
+    overflow-y: scroll;
+}

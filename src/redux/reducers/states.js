@@ -1,4 +1,4 @@
-import * as actionType from './ActionTypes';
+import * as actionType from '../ActionTypes';
 
 export const StatesRed = (state = {states: []}, action) => {
     switch (action.type) {

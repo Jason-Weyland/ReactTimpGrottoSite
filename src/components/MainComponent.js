@@ -5,10 +5,12 @@ import Footer from "./FooterComponent";
 import About from "./AboutComponents/MainAboutComponent";
 import Contact from "./ContactComponent";
 import CreateAccount from "./CreateAccountComponent";
+import Events from "./EventsComponents/EventsComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { fetchCarousel, fetchFactsCard, fetchFaq, fetchOfficers, fetchNavTab, fetchStates } from "../redux/ActionCreators";
+import { actions } from "react-redux-form";
+import { fetchCarousel, fetchFactsCard, fetchFaq, fetchOfficers, fetchNavTab, fetchStates, createNewUser, postContact, postEvents, fetchEventsCard } from "../redux/ActionCreators";
 
 const mapStateToProps = (state) => {
     return {
@@ -18,8 +20,10 @@ const mapStateToProps = (state) => {
         officers: state.officers,
         faq: state.faq,
         navtab: state.navtab,
+        events: state.events
     };
 };
+
 
 const mapDispatchToProps = {
     fetchCarousel: () => fetchCarousel(),
@@ -28,9 +32,24 @@ const mapDispatchToProps = {
     fetchOfficers: () => fetchOfficers(),
     fetchNavTab: () => fetchNavTab(),
     fetchStates: () => fetchStates(),
+    createNewUser: (values) => createNewUser(values),
+    resetCreateUser: () => actions.reset("createUser"),
+    postContact: (values) => postContact(values),
+    resetContactForm: () => actions.reset('contactForm'),
+    fetchEventsCard: () => fetchEventsCard(),
+    postEvents: (values) => postEvents(values),
+    resetEventForm: () => actions.reset('eventForm'),
+    resetTripForm: () => actions.reset('tripForm'),
+
 };
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+    }
+    
     componentDidMount() {
         this.props.fetchCarousel();
         this.props.fetchFactsCard();
@@ -38,6 +57,7 @@ class Main extends Component {
         this.props.fetchOfficers();
         this.props.fetchNavTab();
         this.props.fetchStates();
+        this.props.fetchEventsCard();
     }
     render() {
         return (
@@ -51,10 +71,25 @@ class Main extends Component {
                                 exact
                                 strict
                                 path="/about/:tabId"
-                                render={({ match }) => <About tabId={match.params.tabId} states={this.props.states.states} factscard={this.props.factscard.factscard} officers={this.props.officers.officers} faq={this.props.faq.faq} navtab={this.props.navtab.navtab} />}
+                                render={({ match }) => <About 
+                                                        createNewUser={this.props.createNewUser} 
+                                                        resetCreateUser={this.props.resetCreateUser} 
+                                                        tabId={match.params.tabId} 
+                                                        states={this.props.states.states} 
+                                                        factscard={this.props.factscard.factscard} 
+                                                        officers={this.props.officers.officers} 
+                                                        faq={this.props.faq.faq} 
+                                                        navtab={this.props.navtab.navtab} />}
                             />
-                            <Route exact path="/contact" component={Contact} />
-                            <Route exact path="/createAccount" render={() => <CreateAccount states={this.props.states.states} />} />
+                            <Route exact path="/contact" render={() => <Contact postContact={this.props.postContact} resetContactForm={this.props.resetContactForm} />} />
+                            <Route exact path="/createAccount" render={() => <CreateAccount states={this.props.states.states} createNewUser={this.props.createNewUser} resetCreateUser={this.props.resetCreateUser} />} />
+                            <Route exact path='/events' render={() => <Events 
+                                                                        events={this.props.events.events} 
+                                                                        postEvents={this.props.postEvents}
+                                                                        resetEventForm={this.props.resetEventForm}
+                                                                        resetTripForm={this.props.resetTripForm}
+                                                                        />} 
+                            />
                             <Redirect to="/home" />
                         </Switch>
                     </CSSTransition>

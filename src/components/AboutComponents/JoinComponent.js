@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { TabPane, Row, Col, FormGroup, Label, Card, CardBody, CardFooter, Button } from "reactstrap";
-import { LocalForm, Control, Errors } from "react-redux-form";
+import { TabPane, Row, Col, FormGroup, Label, Card, CardBody, CardFooter } from "reactstrap";
+import { Form, Control, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
 
 const required = (val) => val && val.length;
@@ -18,13 +18,15 @@ class Join extends Component {
             acctLastName: "",
             acctUserName: "",
             acctPassword: "",
+            acctConfPassword: "",
             acctEmail: "",
             acctPhone: "",
             acctAddress: "",
             acctCity: "",
             acctState: "",
             acctZip: "",
-            autoRenew: "",
+            autoRenew: false,
+            termsAgree: false,
             touched: {
                 acctFirstName: false,
                 acctLastName: false,
@@ -43,8 +45,8 @@ class Join extends Component {
     }
 
     handleSubmit(values) {
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
+        this.props.createNewUser(values);
+        this.props.resetCreateUser();
     }
 
     render() {
@@ -97,8 +99,9 @@ class Join extends Component {
                             <h3>Account Information</h3>
                             <hr />
                         </div>
+                        {/* action="https://www.paypal.com/cgi-bin/webscr" */}
                         <div className="col">
-                            <LocalForm onSubmit={(values) => this.handleSubmit(values)} action="https://www.paypal.com/cgi-bin/webscr">
+                            <Form model="createUser" onSubmit={(values) => this.handleSubmit(values)} >
                                 <FormGroup className="form-row">
                                     <div className="col col-md-6">
                                         <Label htmlFor="acctFirstName">First Name:</Label>
@@ -312,7 +315,7 @@ class Join extends Component {
                                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
                                     <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                                 </Row>
-                            </LocalForm>
+                            </Form>
                         </div>
                     </Row>
                 </TabPane>

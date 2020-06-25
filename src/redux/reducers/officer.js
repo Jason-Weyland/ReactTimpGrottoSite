@@ -1,4 +1,4 @@
-import * as actionType from "./ActionTypes";
+import * as actionType from "../ActionTypes";
 
 export const OfficersRed = (
     state = { 
