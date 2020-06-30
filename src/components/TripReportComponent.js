@@ -62,7 +62,7 @@ class TripReport extends Component {
             <div className="col">
               <Form model="tripReportForm" onSubmit={values => this.handleSubmit(values)}>
                 <FormGroup className="form-row">
-                  <div className="col">
+                  <div className="col-12 col-md-4">
                     <Label htmlFor="reportTitle" />
                     Title
                     <Control.text className="form-control" name="reportTitle" id="reportTitle" model=".reportTitle" placeholder="Title of Report" validators={{ required, minLength: minLength(2) }} />
@@ -77,7 +77,7 @@ class TripReport extends Component {
                       }}
                     />
                   </div>
-                  <div className="col">
+                  <div className="col-6 col-md-4">
                     <Label htmlFor="reportAuthor" />
                     Author
                     <Control.text className="form-control" name="reportAuthor" id="reportAuthor" model=".reportAuthor" placeholder="Report Author" validators={{ required, minLength: minLength(2) }} />
@@ -92,7 +92,7 @@ class TripReport extends Component {
                       }}
                     />
                   </div>
-                  <div className="col">
+                  <div className="col-6 col-md-4">
                     <Label htmlFor="reportTripDate" />
                     Trip Date
                     <Control type="date" className="form-control" name="reportTripDate" id="reportTripDate" model=".reportTripDate" validators={{ required }} />
