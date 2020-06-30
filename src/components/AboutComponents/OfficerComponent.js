@@ -62,7 +62,7 @@ class Officers extends Component {
                         return (
                             <React.Fragment key={officer.id}>
                                 <div className="col-sm-6 col-md-3">
-                                    <Card className="mb-4 card-highlight">
+                                    <Card className="mb-4 card-highlight" style={{minHeight: "307.91px"}}>
                                         <CardBody>
                                             <img className="img-card-top" src={baseUrl + officer.image} alt="officer" width="100%" height="auto" />
                                             <br />
