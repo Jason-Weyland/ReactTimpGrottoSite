@@ -8,6 +8,7 @@ import CreateAccount from "./CreateAccountComponent";
 import Events from "./EventsComponents/EventsComponent";
 import Caves from "./CavesComponent";
 import TripReport from "./TripReportComponent";
+import DisplayReport from './DisplayTripReportComponent';
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -102,6 +103,7 @@ class Main extends Component {
               />
               <Route exact path="/caves" render={() => <Caves cavesDT={this.props.cavesDT.cavesDT} />} />
               <Route exact path="/submit-a-trip-report" render={() => <TripReport resetTripReportForm={this.props.resetTripReportForm} postTripReport={this.props.postTripReport} />} />
+              <Route path='/trip-report/:tripId' render={({match}) => <DisplayReport tripId={match.params.tripId} recentTrips={this.props.recentTrips.recentTrips}/>}/>
               <Redirect to="/home" />
             </Switch>
           </CSSTransition>

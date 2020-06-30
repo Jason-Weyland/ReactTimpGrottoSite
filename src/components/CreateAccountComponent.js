@@ -44,6 +44,7 @@ class CreateAccount extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   handleSubmit(values) {
     this.props.createNewUser(values);
     this.props.resetMemberForm();

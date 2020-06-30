@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { Errors, Control, Form } from "react-redux-form";
 
 const required = val => val && val.length;
-const maxLength = len => val => !val || val.length <= len;
+// const maxLength = len => val => !val || val.length <= len;
 const minLength = len => val => val && val.length >= len;
-const isNumber = val => !isNaN(+val);
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-const validPassword = val => /^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/i.test(val);
+// const isNumber = val => !isNaN(+val);
+// const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+// const validPassword = val => /^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/i.test(val);
 
 class TripReport extends Component {
   constructor(props) {

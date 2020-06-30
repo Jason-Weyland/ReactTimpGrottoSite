@@ -1,7 +1,7 @@
-import React, { Component, useState } from "react";
-import { Form, Control, Errors, Field } from "react-redux-form";
+import React, { Component } from "react";
+import { Form, Control, Errors } from "react-redux-form";
 import { Row, FormGroup, TabPane, Button } from "reactstrap";
-import { DatePicker } from 'react-datepicker';
+// import { DatePicker } from 'react-datepicker';
 
 const required = val => val && val.length;
 // const maxLength = (len) => (val) => !val || val.length <= len;
@@ -9,20 +9,20 @@ const required = val => val && val.length;
 const isNumber = val => !isNaN(+val);
 
 
-const MyDate = () => {
-      const [startDate, setStartDate] = useState(new Date());
-      return (
-        <DatePicker
-          selected={startDate}
-          onChange={date => setStartDate(date)}
-          showTimeSelect
-          timeFormat="HH:mm"
-          timeIntervals={15}
-          timeCaption="time"
-          dateFormat="MMMM d, yyyy h:mm aa"
-        />
-      );
-    };
+// const MyDate = () => {
+//       const [startDate, setStartDate] = useState(new Date());
+//       return (
+//         <DatePicker
+//           selected={startDate}
+//           onChange={date => setStartDate(date)}
+//           showTimeSelect
+//           timeFormat="HH:mm"
+//           timeIntervals={15}
+//           timeCaption="time"
+//           dateFormat="MMMM d, yyyy h:mm aa"
+//         />
+//       );
+//     };
 
 
 

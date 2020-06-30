@@ -6,7 +6,7 @@ class RecentTrips extends Component {
   render() {
     return (
       <>
-        <Card className='scroll' style={{ width: "100%", maxHeight: "500px" }}>
+        <Card className="scroll" style={{ width: "100%", maxHeight: "500px" }}>
           <CardHeader className="card-header-green">
             <Row>
               <h2 className="text-light card-title">Recent Trips</h2>
@@ -16,11 +16,13 @@ class RecentTrips extends Component {
             </Row>
           </CardHeader>
           <CardBody>
-            {this.props.recentTrips.map((trip) => {
+            {this.props.recentTrips.map(trip => {
               return (
-                <h5 key={trip.id}>
-                  {trip.reportTitle} by {trip.reportAuthor}
-                </h5>
+                <Link to={`/trip-report/${trip.id}`} key={trip.id} className='text-dark'>
+                  <h5>
+                    {trip.reportTitle} by {trip.reportAuthor}
+                  </h5>
+                </Link>
               );
             })}
           </CardBody>
