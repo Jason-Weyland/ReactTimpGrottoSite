@@ -1,3 +1,5 @@
 {
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.arrowParens": "avoid",
+  "prettier.useEditorConfig": false
 }

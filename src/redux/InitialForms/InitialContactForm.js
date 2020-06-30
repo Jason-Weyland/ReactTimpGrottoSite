@@ -1,8 +1,8 @@
 export const InitialContact = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNum: "",
-    contact: false,
-    questionText: "",
+  firstName: "",
+  lastName: "",
+  email: "",
+  phoneNum: "",
+  contact: false,
+  questionText: "",
 };

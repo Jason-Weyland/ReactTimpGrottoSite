@@ -12,3 +12,9 @@ export const LIST_STATES = 'LIST_STATES';
 
 export const ADD_EVENTS = 'ADD_EVENTS';
 export const ADD_EVENT = 'ADD_EVENT';
+
+export const ADD_RECENT_TRIPS = 'ADD_RECENT_TRIPS';
+export const ADD_TRIPS_CAROUSEL = 'ADD_TRIPS_CAROUSEL';
+export const ADD_RECENT_TRIP = 'ADD-RECENT-TRIP';
+
+export const ADD_CAVES_DT = 'ADD_CAVES_DT';

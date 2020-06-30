@@ -11,6 +11,11 @@ import { InitialContact } from "./InitialForms/InitialContactForm";
 import { EventsCardRed } from "./reducers/eventsCardReducer";
 import { initialEventForm } from "./InitialForms/InitialEventForm";
 import { initialTripForm } from "./InitialForms/InitialTripForm";
+import { initialMemberForm } from "./InitialForms/InitialMemberForm";
+import { initialTripReportForm } from "./InitialForms/InitialTripReportForm";
+import { recentTrips } from "./reducers/recentTrips";
+import {tripsCarousel} from './reducers/tripsCarousel';
+import { CavesDT } from "./reducers/cavesDT";
 
 export const reducers = combineReducers({
   carousel: CarouselRed,
@@ -20,10 +25,16 @@ export const reducers = combineReducers({
   officers: OfficersRed,
   states: StatesRed,
   events: EventsCardRed,
+  recentTrips: recentTrips,
+  tripsCarousel: tripsCarousel,
+  cavesDT: CavesDT,
   ...createForms({
     createUser: InitialUser,
     contactForm: InitialContact,
     eventForm: initialEventForm,
     tripForm: initialTripForm,
+    memberForm: initialMemberForm,
+    tripReportForm: initialTripReportForm,
+
   }),
 });

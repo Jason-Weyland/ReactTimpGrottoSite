@@ -57,7 +57,7 @@ class Contact extends Component {
           <Row className="row-content">
             <div className="col-md-6">
               <h3>Come to a grotto meeting!</h3>
-              <a className="btn btn-link text-dark" href="https://www.google.com/maps/place/Orem+Public+Library/@40.298669,-111.69467,15z/data=!4m5!3m4!1s0x0:0x595700ed210f2254!8m2!3d40.298669!4d-111.69467" target="_blank">
+              <a className="btn btn-link text-dark" href="https://www.google.com/maps/place/Orem+Public+Library/@40.298669,-111.69467,15z/data=!4m5!3m4!1s0x0:0x595700ed210f2254!8m2!3d40.298669!4d-111.69467" target="_blank" rel="noopener noreferrer">
                 <i className="fa fa-map" /> 58 N State St, Orem, UT 84057
               </a>
               <p>Meetings: Third Tuesday of each month @ 7:00 p.m. MST</p>
@@ -65,7 +65,7 @@ class Contact extends Component {
             </div>
             <div className="col-md-6">
               <h3>Email Us</h3>
-              <a className="btn btn-link text-dark" href="mailto:timpgrotto@gmail.com" target="_blank">
+              <a className="btn btn-link text-dark" href="mailto:timpgrotto@gmail.com" target="_blank" rel="noopener noreferrer">
                 <i className="fa fa-envelope-o" />
                 timpgrotto@gmail.com
               </a>

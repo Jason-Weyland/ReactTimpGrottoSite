@@ -57,7 +57,7 @@ class Officers extends Component {
         };
         const RenderCard = ({ officers }) => {
             return (
-                <Row className="row-content">
+                <Row className="row-content d-flex justify-content-center">
                     {officers.map((officer) => {
                         return (
                             <React.Fragment key={officer.id}>

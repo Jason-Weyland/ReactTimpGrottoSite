@@ -1,7 +1,144 @@
-import React, { Component } from "react";
-import { Card, CardHeader, CardBody, Modal, ModalHeader, ModalBody, Button, Row } from "reactstrap";
+import React, { Component, useState } from "react";
+import { Card, CardHeader, CardBody, Modal, ModalHeader, ModalBody, Button, Row, Collapse } from "reactstrap";
 import ModalTabs from "./EventsModalTabsComponent";
 import { FadeTransform, Fade, Stagger } from "react-animation-components";
+
+const RenderEventsCard = ({ events }) => {
+  const [isOpen, setIsOpen] = useState(null);
+
+  const toggle = (event) => {
+    if (!isOpen || event.id !== isOpen) {
+      setIsOpen(event.id);
+    } else if (isOpen === event.id) {
+      setIsOpen(false);
+    }
+  };
+
+  // const formatTripDate = (tripDate) => {
+  //   var hours = tripDate.getHours();
+  //   var minutes = tripDate.getMinutes();
+  //   var ampm = hours >= 12 ? "pm" : "am";
+  //   hours = hours % 12;
+  //   hours = hours ? hours : 12; // the hour '0' should be '12'
+  //   minutes = minutes < 10 ? "0" + minutes : minutes;
+  //   var strTime = hours + ":" + minutes + " " + ampm;
+  //   return tripDate.getMonth() + 1 + "/" + tripDate.getDate() + "/" + tripDate.getFullYear() + "  " + strTime;
+  // }
+  
+
+  return (
+    <>
+      {events.map((event) => {
+        if (event.eventName) {
+          return (
+            <Fade in key={event.id}>
+              <Row>
+                <h5>
+                  {event.eventName} - {event.eventDate}
+                </h5>
+                <Button color="warning" onClick={() => toggle(event)} className="ml-auto btn btn-sm">
+                  Details
+                </Button>
+              </Row>
+              <Row>
+                <div className="col">
+                  <Collapse isOpen={event.id === isOpen} id={event.id}>
+                    <Card width="100%" className="my-2" style={{ borderColor: "#4c5401" }}>
+                      <CardBody>
+                        <p>
+                          <b>Event:</b> {event.eventName}
+                        </p>
+                        <p>
+                          <b>Date:</b> {event.eventDate}
+                        </p>
+                        <p>
+                          <b>Location:</b> {event.eventLoc}
+                        </p>
+                        <p>
+                          <b>Details:</b> {event.eventDetails}
+                        </p>
+                      </CardBody>
+                    </Card>
+                  </Collapse>
+                </div>
+              </Row>
+            </Fade>
+          );
+        }
+        if (event.tripName) {
+          return (
+            <Fade in key={event.id}>
+              <Row>
+                <h5>
+                  {event.tripName} - {event.tripDate}
+                </h5>
+                <Button color="warning" onClick={() => toggle(event)} className="ml-auto btn btn-sm">
+                  Details
+                </Button>
+              </Row>
+              <Row>
+                <div className="col">
+                  <Collapse isOpen={event.id === isOpen} id={event.id}>
+                    <Card width="100%" className="my-2" style={{ borderColor: "#4c5401" }}>
+                      <CardBody>
+                        <Row>
+                          <div className="col-6">
+                            <p>
+                              <b>Cave/Area:</b> {event.tripName}
+                            </p>
+                          </div>
+                          <div className="col-6">
+                            <p>
+                              <b>Date:</b> {event.tripDate}
+                            </p>
+                          </div>
+                        </Row>
+                        <Row>
+                          <div className="col">
+                            <p>
+                              <b>Trip Leader:</b> {event.tripLeader}
+                            </p>
+                          </div>
+                          <div className="col">
+                            <p>
+                              <b>Trip Type:</b> {event.tripType}
+                            </p>
+                          </div>
+                        </Row>
+                        <Row>
+                          <div className="col order-last">
+                            <p>
+                              <b>Capacity:</b> {event.tripSize}
+                            </p>
+                          </div>
+                          <div className="col">
+                            <p>
+                              <b>Callout:</b> {event.tripCallout}
+                            </p>
+                          </div>
+                        </Row>
+                        <p>
+                          <b>Callout Contact:</b> {event.tripCalloutTel}
+                        </p>
+                        <p>
+                          <b>Callout Time:</b> {event.tripCalloutTime}
+                        </p>
+                        <p>
+                          <b>Details:</b> {event.tripDetails}
+                        </p>
+                      </CardBody>
+                    </Card>
+                  </Collapse>
+                </div>
+              </Row>
+            </Fade>
+          );
+        }
+        return <div/>
+      })}
+    </>
+  );
+};
 
 class EventCard extends Component {
   constructor(props) {
@@ -18,43 +155,6 @@ class EventCard extends Component {
     });
   };
   render() {
-    const RenderEventsCard = ({ events }) => {
-      return (
-        <>
-          {events.map((event) => {
-            if (event.eventName) {
-              return (
-                <Row key={event.id}>
-                  <Fade in>
-                    <div className="col-12 bg-light">
-                      <h4>{event.eventDate} - Grotto Event</h4>
-                    </div>
-                    <div className="col-10 offset-sm-1">
-                      <p>{event.eventName}</p>
-                    </div>
-                  </Fade>
-                </Row>
-              );
-            }
-            if (event.tripName) {
-              return (
-                <Row key={event.id}>
-                  <Fade in>
-                    <div className="col-12 bg-light">
-                      <h4>{event.tripDate} - Cave Trip</h4>
-                    </div>
-                    <div className="col-10 offset-sm-1">
-                      <p>{event.tripName}</p>
-                    </div>
-                  </Fade>
-                </Row>
-              );
-            }
-          })}
-        </>
-      );
-    };
-
     return (
       <>
         <FadeTransform
@@ -67,7 +167,7 @@ class EventCard extends Component {
             <CardHeader className="card-header-green">
               <Row>
                 <h2 className="card-title text-light text-center">Upcoming Events</h2>
-                <Button className="ml-auto btn btn-lg" type="button" color="warning" onClick={this.toggleModal}>
+                <Button className="ml-auto btn btn-lg btn-outline-warning" type="button" color="warning" onClick={this.toggleModal}>
                   Create an Event
                 </Button>
               </Row>

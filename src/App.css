@@ -1,98 +1,103 @@
 h1,
 h2,
 h3 {
-    font-family: "Amatic SC";
+  font-family: "Amatic SC";
 }
 
 .jumbotron {
-    padding: 30px;
-    background-image: linear-gradient(to right, #ffa626, #4c5401);
-    color: white;
-    margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #ffa626, #4c5401);
+  color: white;
+  margin: 0;
 }
 
 .navbar {
-    background-color: #4c5401;
+  background-color: #4c5401;
 }
 
 .dropdown-menu {
-    background-color: #ffa626;
+  background-color: #ffa626;
 }
 
 .site-footer {
-    background-image: linear-gradient(#f8c37a, #7b8337);
-    padding: 20px 0;
+  background-image: linear-gradient(#f8c37a, #7b8337);
+  padding: 20px 0;
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .modal-header {
-    background-color: #ffa626;
+  background-color: #ffa626;
 }
 
 .card-header-green {
-    background-color: #4c5401;
+  background-color: #4c5401;
 }
 
 .card-header-yellow {
-    background-color: #ffa626;
+  background-color: #ffa626;
 }
 
-#tabMeet .card {
-    border-color: #4c5401;
+.card-highlight {
+  border-color: #4c5401;
 }
 
 .card-highlight:hover {
-    border-color: #ffa626;
+  border-color: #ffa626;
 }
 
 .row-content {
-    padding: 50px 0;
-    border-bottom: 1px ridge;
-    min-height: 200px;
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
 }
 
-.carousel-inner,
+ul > .carousel-inner,
 .carousel-item {
-    background-color: darkslategrey;
-    background-position: center;
-    height: 100%;
-    width: 100%;
+  background-color: darkslategrey;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-caption:first-of-type {
-    background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .carousel-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .carousel-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .page-enter {
-    opacity: 0;
+  opacity: 0;
 }
 
 .page-enter-active {
-    opacity: 1;
-    transition: 300ms ease-in;
+  opacity: 1;
+  transition: 300ms ease-in;
 }
 
 .page-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .page-exit-active {
-    opacity: 0;
-    transition: 300ms ease-out;
+  opacity: 0;
+  transition: 300ms ease-out;
 }
 
 .scroll {
-    overflow-y: scroll;
+  overflow-y: scroll;
+}
+
+.trips-carousel > img {
+  max-height: 303.75px;
+  width: auto;
 }

@@ -119,7 +119,7 @@ class Header extends Component {
                             </Row>
 
                             <span className="navbar-text ml-auto">
-                                <Button outline onClick={this.toggleModal}>
+                                <Button className='btn btn-outline-warning' onClick={this.toggleModal}>
                                     <i className="fa fa-sign-in fa-lg d-sm-none d-md-inline-block" /> Sign In
                                 </Button>
                             </span>

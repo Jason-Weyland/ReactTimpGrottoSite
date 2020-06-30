@@ -31,8 +31,8 @@ const Home = ({ carousel }) => {
             <CarouselItem key={item.id}>
                 <img className="carousel-image" src={baseUrl + item.src} alt={item.alt} />
                 <Link to={item.link}>
+                    <CarouselCaption className="carousel-link d-inline-block d-md-none" captionHeader={item.header} />
                     <CarouselCaption className="carousel-link" captionText={item.caption} captionHeader={item.header} />
-                    <CarouselCaption className="carousel-link d-inline-block d-md-none"  captionHeader={item.header} />
                 </Link>
             </CarouselItem>
         );
