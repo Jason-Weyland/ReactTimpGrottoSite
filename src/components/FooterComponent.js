@@ -43,7 +43,7 @@ const Footer = (props) => {
                             </div>
                             <div className="col">
                                 <p className="text-center">
-                                    For more info about the NSS visit
+                                    For more info about the NSS visit{" "}
                                     <a href="http://www.caves.org" target="_blank" rel="noopener noreferrer" className="text-dark">
                                         <u>caves.org</u>
                                     </a>
