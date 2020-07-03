@@ -1,0 +1,505 @@
+{
+  "carousel": [
+    {
+      "id": 1,
+      "src": "assets/images/background Cropped.jpg",
+      "alt": "Timp Grotto Logo",
+      "header": "About",
+      "caption": "See what the Timpanogos Grotto is all about.",
+      "link": "/about/us"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/mdSump Cropped.jpg",
+      "alt": "Main Drain Sump",
+      "header": "Grotto News & Events",
+      "caption": "Check out what the grotto has been up to and check for any upcoming events or trips.",
+      "link": "/events"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/nwFantasy Cropped.jpg",
+      "alt": "Fantasy Well, Nielson's Well Cave",
+      "header": "Caves",
+      "caption": "See some of our featured caves as well as any closed caves.",
+      "link": "/caves"
+    },
+    {
+      "id": 4,
+      "src": "assets/images/tgLake Cropped.jpg",
+      "alt": "Tony Grove Lake",
+      "header": "Contact",
+      "caption": "Contact us with any comments or questions that you have.",
+      "link": "/contact"
+    }
+  ],
+  "factscard": [
+    {
+      "id": 1,
+      "dataTitle": "Established",
+      "dataDescription": "September 25, 1974"
+    },
+    {
+      "id": 2,
+      "dataTitle": "Grotto Members",
+      "dataDescription": "15"
+    },
+    {
+      "id": 3,
+      "dataTitle": "Known Caves in Utah",
+      "dataDescription": "560"
+    },
+    {
+      "id": 4,
+      "dataTitle": "Utah's Deepest Cave ",
+      "dataDescription": "1,300ft"
+    },
+    {
+      "id": 5,
+      "dataTitle": "Utahs Longest Cave",
+      "dataDescription": "5.93 Miles"
+    }
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "header": "How do I obtain a list of caves in my area?",
+      "text": "The best way to find caves in your area is by becoming a member of the grotto. As a member, you will have access to caving trips, meetings, and our member forums where you can introduce yourself and meet other cavers in your area. As a rule, cave locations are not published in order to help protect the cave."
+    },
+    {
+      "id": 2,
+      "header": "How do I become a member?",
+      "text": "Click the \"Become a Member\" tab on our about us page. Likewise, you can also come to any meeting and pay dues there to become a member. Dues are $15/year."
+    },
+    {
+      "id": 3,
+      "header": "What is a grotto?",
+      "text": "The term 'grotto' is synonymous with 'club' or 'chapter', as in a chapter of a larger organization. The Timpanogos Grotto primarily serves the Central Utah area, and is one of around 250 chapters of the National Speleological Society."
+    },
+    {
+      "id": 4,
+      "header": "What is the National Speleological Society?",
+      "text": "The National Speleological Society (NSS) is a non-profit membership organization dedicated to the scientific study of caves and karst; protecting caves and their natural contents through conservation, ownership, stewardship, and public education; and promoting responsible cave exploration and fellowship among those interested in caves. [taken from the NSS mission statement] The NSS is our parent organization. Almost all of us are also members of the NSS."
+    },
+    {
+      "id": 5,
+      "header": "How do I obtain a list of caves in my area?",
+      "text": "The best way to find caves in your area is by becoming a member of the grotto. As a member, you will have access to caving trips, meetings, and our member forums where you can introduce yourself and meet other cavers in your area. As a rule, cave locations are not published in order to help protect the cave."
+    },
+    {
+      "id": 6,
+      "header": "Can't I just visit the caves on my own? Why do I have to join a group to learn their locations?",
+      "text": "Caves that get abused become closed to everyone, including even the most responsible, veteran cavers. People new to caving may unknowingly abuse caves; examples include touching formations or creatures, walking in protected areas, or not using pads when rigging rope. There are even some people who intentionally abuse caves, leaving behind trash, graffiti, and even human waste. We subscribe to a \"leave no trace\" philosophy, and do our best to protect our underground treasures from both accidental and intentional harm. This includes only sharing locations with those who we trust to also cherish and protect them."
+    },
+    {
+      "id": 7,
+      "header": "What if I don't know what gear to get, how to climb rope, etc?",
+      "text": "This is one of the major benefits to joining a grotto! The Timpanogos Grotto offers vertical classes, access to an entire library of caving books, publications, trips for all skill levels, and monthly educational meetings. All of our members were once new, too. We're happy to help you figure out what will work, offer guidance, and point you in the right direction. Our members range from first-time cavers to seasoned veterans and everything in between."
+    },
+    {
+      "id": 8,
+      "header": "Is caving safe?",
+      "text": "No. Caving is an inherently dangerous activity. People are injured and die every year. The caving we do does not involve guard rails, paved paths, and stairs. The kind of caving we do is NOT a tour. This is why we take safety seriously. Also, caving is not for everyone. We are happy to get you started, but we do not hold your hand - everyone is ultimately responsible for themselves. We try to help make it as safe as possible, but caving is not simply hiking underground. If we do not think you can handle yourself safely or if you cannot follow conservation guidelines, you will not be invited on or allowed to join trips. It is not just your life at risk, it is our lives, too."
+    }
+  ],
+  "navtab": [
+    {
+      "tabId": "us",
+      "text": "About"
+    },
+    {
+      "tabId": "meet",
+      "text": "Meet the Officers"
+    },
+    {
+      "tabId": "faq",
+      "text": "FAQ"
+    },
+    {
+      "tabId": "join",
+      "text": "Become a Member"
+    }
+  ],
+  "officers": [
+    {
+      "id": 1,
+      "image": "/assets/images/ropePit.jpg",
+      "name": "Eric Richards",
+      "title": "President",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/lbccShadow.jpg",
+      "name": "Thomas Holmes",
+      "title": "Social Media Expert",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/ropePit.jpg",
+      "name": "Richard Downy",
+      "title": "Treasurer",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 4,
+      "image": "/assets/images/lbccShadow.jpg",
+      "name": "Jason Weyland",
+      "title": "Trip Organizer",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 5,
+      "image": "/assets/images/lbccShadow.jpg",
+      "name": "Jack Johnson",
+      "title": "Trip Organizer",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 6,
+      "image": "/assets/images/lbccShadow.jpg",
+      "name": "Jack Johnson",
+      "title": "Trip Organizer",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    },
+    {
+      "id": 7,
+      "image": "/assets/images/lbccShadow.jpg",
+      "name": "Jack Johnson",
+      "title": "Trip Organizer",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus vitae nesciunt voluptate aperiam. Esse saepe aperiam architecto, nemo deleniti omnis repudiandae reprehenderit velit exercitationem vero, tempore rem porro quidem!"
+    }
+  ],
+  "states": [
+    "Alabama",
+    "Alaska",
+    "American Samoa",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "District of Columbia",
+    "Federated States of Micronesia",
+    "Florida",
+    "Georgia",
+    "Guam",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Marshall Islands",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Northern Mariana Islands",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Palau",
+    "Pennsylvania",
+    "Puerto Rico",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virgin Island",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+  ],
+  "users": [],
+  "contact": [
+    {
+      "id": 1
+    },
+    {
+      "firstName": "Jason",
+      "lastName": "Weyland",
+      "email": "jason.weyland13@gmail.com",
+      "phoneNum": "8018890671",
+      "contact": true,
+      "questionText": "ljhlj",
+      "id": 2
+    },
+    {
+      "firstName": "Eric",
+      "lastName": "Richards",
+      "email": "ericscottrichards@gmail.com",
+      "phoneNum": "8016159902",
+      "contact": false,
+      "questionText": "hello world",
+      "id": 3
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNum": "",
+      "contact": false,
+      "questionText": "",
+      "id": 4
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phoneNum": "",
+      "contact": false,
+      "questionText": "",
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "eventName": "Vertical Practice",
+      "eventDate": "2020-06-10",
+      "eventLoc": "Here",
+      "eventDetails": "asdfasdf",
+      "id": 4
+    },
+    {
+      "tripName": "Main Drain",
+      "tripDate": "2020-06-30",
+      "tripType": "bolting",
+      "tripLeader": "Jason",
+      "tripSize": "4",
+      "tripCallout": "Hannah Lieffring",
+      "tripCalloutTel": "7158985425",
+      "tripCalloutTime": "2020-07-03T14:55",
+      "tripDetails": ".mn",
+      "id": 5
+    },
+    {
+      "eventName": "Grotto Meeting",
+      "eventDate": "2020-07-11",
+      "eventLoc": "Dogwood",
+      "eventDetails": "",
+      "id": 6
+    },
+    {
+      "eventName": "Vertical Practice",
+      "eventDate": "2020-07-02",
+      "eventLoc": "Local Park",
+      "eventDetails": "dagsdg",
+      "id": 7
+    },
+    {
+      "tripName": "Main Drain",
+      "tripDate": "2020-10-14",
+      "tripType": "recreational",
+      "tripLeader": "Jason",
+      "tripSize": "6",
+      "tripCallout": "Hannah Lieffring",
+      "tripCalloutTel": "7158985425",
+      "tripCalloutTime": "2020-10-15T16:24",
+      "tripDetails": "",
+      "id": 8
+    },
+    {
+      "eventName": "Cookout",
+      "eventDate": "2020-06-27",
+      "eventLoc": "Dogwood",
+      "eventDetails": "Bring yo dogs",
+      "id": 9
+    },
+    {
+      "eventName": "Cookout",
+      "eventDate": "2020-06-27",
+      "eventLoc": "Dogwood",
+      "eventDetails": "We're having hot dogs and burgers. We will have vertical practice going on in a tree. Bring your vertical gear!",
+      "id": 10
+    },
+    {
+      "tripName": "Neffs canyon cave",
+      "tripDate": "2020-07-04",
+      "tripType": "rigging",
+      "tripLeader": "Jason",
+      "tripSize": "4",
+      "tripCallout": "Eric Richards",
+      "tripCalloutTel": "4354894624",
+      "tripCalloutTime": "2020-07-05T00:00",
+      "tripDetails": "Rigging down to the bottom of devils slide. Rope is already in the cave. ",
+      "id": 11
+    },
+    {
+      "eventName": "Sinkhole De Mayo",
+      "eventDate": "2020-07-11",
+      "eventLoc": "Pink Lime Pit",
+      "eventDetails": "Come ready to eat tacos tacos tacos! Brings your panchos and sambreros!! ",
+      "id": 12
+    },
+    {
+      "eventName": "Bat Night",
+      "eventDate": "2020-07-04",
+      "eventLoc": "Timpanogos Cave NM",
+      "eventDetails": "Join us with the Timpanogos Cave NM in capturing and documenting bats! Meet at the Timpanogos Cave parking lot at 7pm. Hope to see you all there!",
+      "id": 13
+    },
+    {
+      "eventName": "Caving Practice",
+      "eventDate": "2020-07-25",
+      "eventLoc": "Dogwood",
+      "eventDetails": "These details",
+      "id": 14
+    },
+    {
+      "tripName": "Main Drain",
+      "tripDate": "2020-07-16",
+      "tripType": "bolting",
+      "tripLeader": "Jason",
+      "tripSize": "4",
+      "tripCallout": "Hannah Lieffring",
+      "tripCalloutTel": "7158985425",
+      "tripCalloutTime": "2020-07-17T15:57",
+      "tripDetails": "Meet at the tony grove parking lot",
+      "id": 15
+    }
+  ],
+  "recentTrips": [
+    {
+      "id": 1,
+      "reportTitle": "Main Drain: Neffs Inlet Break Out",
+      "reportAuthor": "Peter Hartley",
+      "reportTripDate": "March 5th, 2020",
+      "reportTripType": "Survey",
+      "reportText": "Miles and miles of cave found"
+    },
+    {
+      "reportTitle": "Carnivorous Sump Dug Open!",
+      "reportAuthor": "Jason Weyland",
+      "reportTripDate": "2020-06-27",
+      "reportPhoto": "",
+      "reportText": "It goes!",
+      "id": 2
+    },
+    {
+      "reportTitle": "Gypsy Dome Climb Report",
+      "reportAuthor": "Jason Weyland",
+      "reportTripDate": "2020-06-06",
+      "reportPhoto": "",
+      "reportText": "Elliot Stahl, Dave Stahl, and myself set out to Gypsy Cave located on the SCCI Charles B. Henson Johnson’s Crook preserve in order to execute a dome climb to promising leads located high in the back wall in the main entrance. There are a total of 3 possible leads in this area of the cave. Two appear to be entrances into developed canyon passage located approximately 65ft up the face of the wall. The third lead is located in the ceiling of this room, approximately another 40ft above the two aforementioned leads.  Upon arrival, we determined that the far right lead, which appeared to have an entrance to a well developed canyon passage, would be our first priority which provided the cleanest route up the wall to access. With Elliot belaying me, I set out to climb the wall, making 14 placements with removable gear, and reached the lead in just under two hours. The canyon passage went on for approximately 15ft, coming to a constriction between flowstone. Another 15ft of passage was gained after passing through the constriction before the passage terminated. The entrance to this lead will be the site for the new belay station from which the final climb to the lead in the ceiling will be accomplished. As such, we set rigging from the first lead, using 3/8 inch x 3” long ss bolts, with two rebelays in order to avoid large, loose boulders and sharp rocks, back to the main passage floor. Once the rigging was in place, the route was cleaned of all removable gear.\n\nFuture objectives\n\nWe will return to the cave to complete the final climb to the lead in the ceiling. After evaluating its potential for continuing passage, we will then rappel from this lead to the final third lead, located parallel to the first lead, offset approximately 20ft to the left. In the event that no significant passage is found, hangers will be removed from the rebelays set and bolts pounded through and covered.\n",
+      "id": 3
+    },
+    {
+      "reportTitle": "Little Brush Creek Cave",
+      "reportAuthor": "Hannah Lieffring",
+      "reportTripDate": "2019-01-30",
+      "reportPhoto": "",
+      "reportText": "Little Brush Creek Cave, Uintah County, Utah\nOn trip: Hannah Lieffring, Jason Weyland, Andy Armstrong, Eric Richards, Justin Calder\nAfter having done a lot of traveling and finally heading back to Utah, Hannah and I were thinking of our\ngood friends Andy and Bonny Armstrong. We reached out to them to see if they would be free for any\ncaving while we would be in Utah, and we were able to set up a trip to Little Brush Creek Cave which he\nstates being his favorite cave in Utah. Unfortunately Bonny wasn’t able to come along. But by the time\nthe trip rolled around, Eric Richards and Justin Calder were on board.\nAfter talking with Andy, we made a plan that we wanted to visit the black stream in the cave. Hannah\nand I made a trip there last November, and were stopped by towering mud banks that blocked the\npassage. Now, more prepared for what we would encounter, we were finally getting back there.\nWe drove out on Saturday morning to do nearby Toothbrush cave with Eric and Justin, as Andy couldn’t\narrive until Sunday, and checked a few leads that were given to us by Dave Herron. These caves have the\npotential to flood dramatically every summer, making the caves very dynamic by opening or closing\npassages. We were to check to see if any of those had opened in the many years since they were last\nchecked. We scouted some potential high leads that would later need bolt climbs done, and checked\nsome known dig leads that were mapped years ago to see if they had opened up. The big room where\nthe high leads were was really impressive with wintry ice stalagmites and a massive column of ice that\nmimicked flowstone. Eric and Justin took up the dig leads, while Hannah and I traveled back to the\nhigher parts of the cave to check some on some leads on the map. While there, we encountered\nnumerous amazing ice crystals that weren’t unlike gypsum flowers in shape. Both parties being\nunsuccessful and chilled to the core with the below freezing cave temps, we all went back to the main\nroom and started our climb out of the forty foot drop just inside the cave. After derigging and\nsnowshoeing back to the car, we discovered that we had parked a little to far in the snow and had\ngotten stuck. In order to get out, we had to get a little creative with some webbing, an old rope and\nJustin’s new Tacoma. About an hour later, we were out and on our way to get some celebratory Taco\nBell.\nSunday morning, we all gathered at the Split Mountain Motel before piling into the vehicles heading\nback into the Uinta mountains. Our plan was to navigate to the black stream and push as far as we\ncould. The unfinished, minimal detailed map leads me to believe there is a lot more virgin cave to be\nfound as there is a question mark at the end of what appears to be giant borehole passage. It looks as if\nthe last people there just turned around and never came back to push further, and that got me really\nintrigued. It was about three hours of travel through the cave to make it to the black stream cutoff,\nwhich is just an overflow hall for when the black stream floods and pours into the main cave stream\nknown as the white stream. We waded into the water and started heading up stream to where we last\nsaw the mud bank in November. The stream goes underneath the mudbank where it becomes\nimpassible with choked rocks and breakdown, so the only way on is over. With the support of five\npeople, I was able to stem and climb my way up to the top and anchor a handline for the group. It was\nthe first time any of us had been to this point in the cave, and the giant, gaping borehole with the sound\nof rushing water only added to our excitement. Eric and Justin, with an early callout time for them,\nopted to turn around at this point. Afterall, it’s a part of the cave that not many get to see, and making it\n\nthis far had satisfied their need for underground time. After saying our goodbyes, Andy, Hannah and I\ncontinued on up stream. We traveled upstream for a while longer, encountering waist deep pools which\ndrenched us and filled our boots, eventually coming to what I had heard might be there but hadn’t been\nconfirmed – a full-on swim through snow melt water that went on for an unknown length as it snuck out\nof sight around a corner. Since none of us had packed our wetsuits, this was the end for us. A wet travel\nback through an already cold cave with frozen water near the entrance and snow outside didn’t sound\nas enticing as you might think. Another day we will bring even more gear into the cave to go further. We\nopted to turn around, and once back at the black stream cutoff decided to see what was in store for us\ndown stream. The map had the end of this being marked as sumped (to my understanding never having\nbeen dove for any of you cave divers out there), with many question marks identifying side leads along\nthe way. Hannah and I had only traveled just a small way downstream during our last trip here, so these\npassages were again new to the three of us. We followed the twisting, turning stream passage wading\ninto more waist deep pools, negotiating over breakdown, and down incredible waterfalls all while\ndramatic, high walls (often with gaping holes in the side. Remember those question marks on the map?)\noften leading high and out of site into darkness showed us the way. To our surprise, and joy I might add,\nthis went on for much longer than any of us had really expected. Very often, cave maps simply don’t do\nmuch for showing the massive scale or length of the cave as we experience it in person. Soon enough,\nthe ceiling dropped as though to meet the water but left a ongoing two feet of air space with the floor\nalso dropping and turning it into another swimmer. This is it, the end of the map going downstream,\nwhere it is marked as “sump.” Shining our lights into the low air space, it seemed as though the cave\ngoes on to where no person has been before. I anticipate that it does. Hannah, feeling braver than us,\nstarted to wade into the deep water just to “test the waters.” Soon, the tall sandy banks beneath the\nwater and beneath her feet gave way, sending her into the cold, snowmelt water a lot faster than she\nhad planned. Feeling like this too would need a wet suit and future caving trip, we retreated up stream\nuntil we again met the black stream cutoff. As this was the only flowing water in the cave that we\nencountered today, we drank as much as we could, filled our bottles, had a snack, and started the long\njourney out. We returned to what is known as the Cascade Room and braced ourselves (or maybe it was\njust me) for the long crawl ahead. Round trip, Andy estimated for the day that we had crawled hands\nand knees over rocks and cobble for just under 3,000ft. This is by far my least favorite part of the cave,\nand I’ve done it so, so many times now. After stemming over frozen plunge pools and crawling through\nmazes of log jams, we finally emerged from the cave with just the last sliver of daylight. Wanting to take\nadvantage of the light, we changed into our dry, warm clothes and started the snowshoe back to the\ncars, where we had parked more carefully this time. During the drive back to town, we hypothesized and\nthrew ideas around of where this passage goes or what that lead does or where these passages might\nconnect when really only future trips will help us answer those questions.",
+      "id": 4
+    },
+    {
+      "reportTitle": "Mammoth",
+      "reportAuthor": "Hannah",
+      "reportTripDate": "2020-06-27",
+      "reportPhoto": "",
+      "reportText": "Bill Koerschner and Bob Alderson are the best cavers in the expedition. Done. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis maximus massa, eget dictum arcu eleifend eget. Nam quis sem in erat fermentum ultrices et quis eros. Nam porta tortor in sapien dignissim, et porttitor risus sollicitudin. Aliquam viverra nunc non massa aliquam fringilla. Sed mollis, felis at dictum semper, mi nisl cursus felis, sed posuere erat justo vel purus. Sed rutrum nunc pellentesque, pharetra augue at, volutpat nisl. Donec euismod massa et nunc mollis, ac gravida neque ullamcorper. Ut vel augue varius, dignissim eros ultrices, feugiat magna. Mauris iaculis molestie justo sed ultricies. Nunc tempor diam nec diam eleifend, et varius lectus dapibus. Aenean bibendum elit vel tellus pulvinar, eu volutpat velit dictum. Donec libero mauris, fermentum aliquam blandit ac, ornare non velit.\n\nProin interdum elit odio, non aliquet justo gravida ac. Integer semper, metus non malesuada fermentum, sapien risus viverra urna, ac semper libero metus eu enim. Nulla metus nisi, vehicula eget venenatis vel, auctor eget nulla. Vestibulum tempus, erat at euismod lacinia, ex sem faucibus libero, sed luctus tellus tortor et lacus. Vivamus feugiat sodales libero sed viverra. Donec ultrices pulvinar ligula, eu elementum magna tincidunt in. Curabitur sit amet laoreet mi. Mauris in blandit urna. Fusce nec consectetur lorem, non eleifend ligula. Vestibulum vel ultrices eros. Ut vitae molestie nisi.",
+      "id": 5
+    },
+    {
+      "reportTitle": "Carnivorous Sump Dug Open!",
+      "reportAuthor": "Jason",
+      "reportTripDate": "2020-07-18",
+      "reportPhoto": "",
+      "reportText": "A trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdfA trip happened asdfasdf",
+      "id": 6
+    }
+  ],
+  "tripsCarousel": [
+    {
+      "id": 1,
+      "src": "assets/images/tripCarousel/lbcc.jpg"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/tripCarousel/bloodknuckle.jpg"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/tripCarousel/fmic.jpg"
+    },
+    {
+      "id": 4,
+      "src": "assets/images/tripCarousel/anthodites Cropped.jpg"
+    },
+    {
+      "id": 5,
+      "src": "assets/images/tripCarousel/mdHall Cropped.jpg"
+    },
+    {
+      "id": 6,
+      "src": "assets/images/tripCarousel/mdSump Cropped.jpg"
+    },
+    {
+      "id": 7,
+      "src": "assets/images/tripCarousel/nwFantasy Cropped.jpg"
+    },
+    {
+      "id": 8,
+      "src": "assets/images/tripCarousel/Nielsons Well.jpg"
+    }
+  ],
+  "cavesDT": [
+    {
+      "id": 1,
+      "cave": "Logan Cave",
+      "closure": "Permanent",
+      "whenToVisit": "Closed to public"
+    },
+    {
+      "id": 2,
+      "cave": "Antelope Springs Cave",
+      "closure": "Seasonally",
+      "whenToVisit": "Closed Apr-Sept"
+    },
+    {
+      "id": 3,
+      "cave": "Nutty Putty Cave",
+      "closure": "Permanent",
+      "whenToVisit": "Closed to public"
+    },
+    {
+      "id": 4,
+      "cave": "Little Brush Creek Cave",
+      "closure": "Seasonally (you will die)",
+      "whenToVisit": "Oct-Mar when water is low"
+    },
+    {
+      "id": 5,
+      "cave": "Ringtail Caverns",
+      "closure": "Permanent",
+      "whenToVisit": "Closed to public"
+    },
+    {
+      "id": 6,
+      "cave": "Green Eyed Monster",
+      "closure": "Permanent",
+      "whenToVisit": "Private Land"
+    }
+  ]
+}
