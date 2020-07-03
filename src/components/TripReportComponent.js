@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Row, BreadcrumbItem, Breadcrumb, FormGroup, Label, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Errors, Control, Form } from "react-redux-form";
+import SunEditor, {buttonList} from 'suneditor-react';
 
 const required = val => val && val.length;
 // const maxLength = len => val => !val || val.length <= len;
@@ -35,6 +36,11 @@ class TripReport extends Component {
   }
 
   render() {
+    // const MyEditor = () => {
+    //   return(
+    //     <SunEditor setOptions={{buttonList: buttonList.complex}} lang='en'/>
+    //   )
+    // }
     return (
       <>
         <div className="container">

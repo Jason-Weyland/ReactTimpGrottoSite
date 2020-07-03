@@ -8,6 +8,7 @@ import "font-awesome/css/font-awesome.css";
 import "react-fontawesome";
 import "@fortawesome/fontawesome-free";
 import "bootstrap-social/bootstrap-social.css";
+import 'suneditor/dist/css/suneditor.min.css';
 import App from "./App";
 
 ReactDOM.render(

@@ -67,7 +67,7 @@ class About extends Component {
           </div>
           <div className="row">
             <div className="col">
-              <Nav tabs fill>
+              <Nav pills fill>
                 <NavTabs navtab={this.props.navtab} />
               </Nav>
               <TabContent activeTab={this.state.activeTab}>
